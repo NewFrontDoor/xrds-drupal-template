@@ -1,0 +1,228 @@
+header {
+    height: $header-height - 40px;
+    padding: 20px 45px 20px 30px;
+    background-color: $green;
+
+    a {
+        color: #fff;
+    }
+
+    & > div > nav {
+        float: right;
+
+        ul {
+            margin-top: 15px;
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            margin-right: 45px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        text-align: left;
+
+        &.open {
+            .toggle {
+                background-color: #369c50;
+
+                &:after,
+                &:before {
+                    border-color: #fff;
+                }
+
+            }
+
+            .menu {
+                display: block;
+            }
+        }
+
+        .toggle {
+            $size: $header-height - 50px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: $size;
+            height: $size;
+            padding: 25px;
+            cursor: pointer;
+
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                width: 40px;
+                height: 5px;
+                border: 0 solid #497c50;
+            }
+
+            &:before {
+                margin-top: 6px;
+                border-width: 6px 0;
+            }
+
+            &:after {
+                border-width: 0 0 6px 0;
+            }
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            top: $header-height;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-top: 15px;
+            background-color: rgba(101, 189, 81, 0.8);
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            margin: 0;
+            font-size: 30px;
+
+            &.open {
+                background-color: rgba(54, 156, 80, 0.9);
+
+                .toggle-sub {
+                    background-image: url(../images/icons/chevron-up.png);
+                }
+
+                ul {
+                    display: block;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 15px 80px;
+            }
+
+            ul {
+                display: none;
+                padding-bottom: 10px;
+            }
+
+            li {
+                font-size: 20px;
+
+                a {
+                    padding-top: 7px;
+                    padding-bottom: 8px;
+                }
+            }
+
+            .toggle-sub {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 35px;
+                width: 65px;
+                height: 65px;
+                background: transparent url(../images/icons/chevron-down.png) no-repeat center center;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.top-image {
+    height: 385px;
+    margin-bottom: -60px;
+    overflow: hidden;
+
+    img {
+        min-height: 385px;
+        min-width: 100%;
+        object-fit: cover;
+    }
+}
+
+footer {
+    padding: 70px 70px 270px 70px;
+    background-color: #00160d;
+    overflow: auto;
+
+    & > div {
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+
+    nav {
+        float: left;
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    h2 {
+        color: $light-green;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    a {
+        color: #fff;
+        font-size: 13px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        & > div > nav {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+
+    footer {
+        padding-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    header {
+        padding-left: 10px;
+    }
+
+    .header-logo {
+        img {
+            transform: scale(0.8);
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="header-logo">
+      <img src="{{ site_logo }}" alt="Crossroads Hobart" />
+    </a>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{%
+    set classes = [
+        'paragraph',
+        'paragraph--type--' ~ paragraph.bundle|clean_class,
+        content.field_extra_class ? 'paragraph--extra--' ~ content.field_extra_class['#items'][0].value|clean_class,
+        view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    <div class="paragraph__content">
+        {%- for field in content -%}
+            <div class="paragraph--type--{{ paragraph.bundle|clean_class }}__{{ field['#field_name']|clean_class }}">
+                {{ field }}
+            </div>
+        {%- endfor -%}
+    </div>
+</div>

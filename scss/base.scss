@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+@import 'libs/normalize';
+
+/* Colours */
+$green: #63bc50;
+$darker-green: #3f9250;
+$light-green: #84c774;
+$slightly-different-green: #70b674;
+
+
+/* Spacing */
+$content-max-width: 1000px;
+$header-height: 90px;
+$section-height: 550px;
+
+@import 'mixins';
+@import 'drupal';
+@import 'layout';
+@import 'paragraphs';
+@import 'homepage';
+
+/* Generic */
+body {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    background-color: #fffde8;
+}
+
+a {
+    text-decoration: none;
+    color: $green;
+}

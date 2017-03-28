@@ -1,0 +1,40 @@
+{%
+    set classes = [
+        'paragraph',
+        'paragraph--type--' ~ paragraph.bundle|clean_class,
+        content.field_extra_class ? 'paragraph--extra--' ~ content.field_extra_class['#items'][0].value|clean_class,
+        view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    <div class="paragraph__content">
+        <div class="paragraph--type--location-and-times__field-map">
+            {{ content.field_map }}
+        </div>
+        <div class="paragraph--type--location-and-times__location">
+            <div class="paragraph--type--location-and-times__field-location-title">
+                {{ content.field_location_title }}
+            </div>
+            <div class="paragraph--type--location-and-times__field-location">
+                {{ content.field_location }}
+            </div>
+        </div>
+        <div class="paragraph--type--location-and-times__times">
+            <div class="paragraph--type--location-and-times__field-time-title">
+                {{ content.field_time_title }}
+            </div>
+            <div class="paragraph--type--location-and-times__field-time-1">
+                {{ content.field_time_1 }}
+            </div>
+            <div class="paragraph--type--location-and-times__field-description-1">
+                {{ content.field_description_1 }}
+            </div>
+            <div class="paragraph--type--location-and-times__field-time-2">
+                {{ content.field_time_2 }}
+            </div>
+            <div class="paragraph--type--location-and-times__field-description-2">
+                {{ content.field_description_2 }}
+            </div>
+        </div>
+    </div>
+</div>

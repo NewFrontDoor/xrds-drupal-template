@@ -1,0 +1,61 @@
+%button-base {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 3px;
+}
+
+%primary-button {
+    @extend %button-base;
+    background-color: $green;
+    color: #fff;
+
+    &:hover {
+        background-color: $darker-green;
+    }
+}
+
+%secondary-button {
+    @extend %button-base;
+    padding: 11px 23px;
+    border: 2px solid #52934f;
+    color: #52934f;
+
+    &:hover {
+        border-color: $green;
+        background-color: $green;
+        color: #fff;
+    }
+}
+
+%title {
+    margin: 0 0 50px 0;
+    color: $light-green;
+    font-size: 30px;
+    font-weight: 900;
+
+    & > div:after {
+        content: '';
+        display: block;
+        width: 130px;
+        margin: 20px auto 0 auto;
+        border-bottom: 2px dotted $light-green;
+    }
+}
+
+%small-title {
+    margin: 0;
+    color: $light-green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+%feature-text {
+    color: #58595b;
+    font-size: 30px;
+    line-height: 130%;
+}
+
+%center-content {
+    max-width: $content-max-width;
+    margin: 0 auto;
+}

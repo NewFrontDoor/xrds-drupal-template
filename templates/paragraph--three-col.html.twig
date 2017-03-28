@@ -1,0 +1,62 @@
+{%
+    set classes = [
+        'paragraph',
+        'paragraph--type--' ~ paragraph.bundle|clean_class,
+        content.field_extra_class ? 'paragraph--extra--' ~ content.field_extra_class['#items'][0].value|clean_class,
+        view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    <div class="paragraph__content">
+        <div class="paragraph--type--three-col__field-three-col-title">
+            {{ content.field_three_col_title }}
+        </div>
+        <div class="paragraph--type--three-col__cols">
+            <div class="paragraph--type--three-col__first-col">
+                <div class="paragraph--type--three-col__field-first-col-image">
+                    {{ content.field_first_col_image }}
+                </div>
+                <div class="paragraph--type--three-col__field-first-col-title">
+                    {{ content.field_first_col_title }}
+                </div>
+                <div class="paragraph--type--three-col__field-first-col-text">
+                    {{ content.field_first_col_text}}
+                </div>
+                <div class="paragraph--type--three-col__field-first-col-button">
+                    {{ content.field_first_col_button }}
+                </div>
+            </div>
+            <div class="paragraph--type--three-col__second-col">
+                <div class="paragraph--type--three-col__field-second-col-image">
+                    {{ content.field_second_col_image }}
+                </div>
+                <div class="paragraph--type--three-col__field-second-col-title">
+                    {{ content.field_second_col_title }}
+                </div>
+                <div class="paragraph--type--three-col__field-second-col-text">
+                    {{ content.field_second_col_text}}
+                </div>
+                <div class="paragraph--type--three-col__field-second-col-button">
+                    {{ content.field_second_col_button }}
+                </div>
+            </div>
+            <div class="paragraph--type--three-col__third-col">
+                <div class="paragraph--type--three-col__field-third-col-image">
+                    {{ content.field_third_col_image }}
+                </div>
+                <div class="paragraph--type--three-col__field-third-col-title">
+                    {{ content.field_third_col_title }}
+                </div>
+                <div class="paragraph--type--three-col__field-third-col-text">
+                    {{ content.field_third_col_text}}
+                </div>
+                <div class="paragraph--type--three-col__field-third-col-button">
+                    {{ content.field_third_col_button }}
+                </div>
+            </div>
+        </div>
+        <div class="paragraph--type--three-col__field-section-button">
+            {{ content.field_section_button }}
+        </div>
+    </div>
+</div>
