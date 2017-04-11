@@ -17,13 +17,15 @@ $section-height: 550px;
 @import 'drupal';
 @import 'layout';
 @import 'paragraphs';
+@import 'paragraphs-responsive';
 @import 'homepage';
 
 /* Generic */
 body {
     font-family: 'Lato', sans-serif;
     position: relative;
-    background-color: #fffde8;
+    background: #fffde8 url(../images/second-level-bg.jpg) repeat-y 0 0;
+    background-size: 100% auto;
 }
 
 a {

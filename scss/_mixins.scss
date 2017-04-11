@@ -7,6 +7,7 @@
 %primary-button {
     @extend %button-base;
     background-color: $green;
+    border: none;
     color: #fff;
 
     &:hover {
@@ -45,8 +46,16 @@
 %small-title {
     margin: 0;
     color: $light-green;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 900;
+
+    & > div:after {
+        content: '';
+        display: block;
+        width: 130px;
+        margin: 20px auto;
+        border-bottom: 2px dotted $light-green;
+    }
 }
 
 %feature-text {

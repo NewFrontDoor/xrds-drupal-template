@@ -157,20 +157,17 @@ header {
 footer {
     padding: 70px 70px 270px 70px;
     background-color: #00160d;
-    overflow: auto;
 
     & > div {
+        display: flex;
+        flex-wrap: wrap;
         max-width: $content-max-width;
         margin: 0 auto;
     }
 
     nav {
-        float: left;
+        margin-bottom: 30px;
         margin-right: 50px;
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
 
     h2 {
@@ -207,6 +204,15 @@ footer {
 
         .hamburger {
             display: block;
+        }
+    }
+    .top-image {
+        $height: 200px;
+        height: $height;
+        margin-bottom: 0;
+
+        img {
+            min-height: $height;
         }
     }
 
